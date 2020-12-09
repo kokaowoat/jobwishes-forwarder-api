@@ -5,6 +5,9 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
+// TODO uncomment when using local env
+// require('dotenv').config();
+
 app.start = function() {
   // start the web server
   return app.listen(function() {
