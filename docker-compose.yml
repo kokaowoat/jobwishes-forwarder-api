@@ -1,0 +1,10 @@
+version: '2'
+services:  
+  jobwishes-forwarder-service:
+    build: .
+    environment:
+      - NODE_ENV=development
+      - API_HOST=http://jobs.github.com/positions.json
+    ports:
+      - 3001:3001
+    restart: unless-stopped

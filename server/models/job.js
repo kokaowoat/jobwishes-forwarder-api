@@ -7,7 +7,7 @@ module.exports = function (Job) {
 
   Job.position = function (page, cb) {
     const request = {
-      uri: `http://jobs.github.com/positions.json?page=${page}`,
+      uri: `${process.env.API_HOST}?page=${page}`,
       method: 'GET',      
       json: true,
     };
@@ -27,7 +27,7 @@ module.exports = function (Job) {
 
   Job.positionFilter = function (page, description, cb) {
     const request = {
-      uri: `http://jobs.github.com/positions.json?page=${page}&description=${description}`,
+      uri: `${process.env.API_HOST}?page=${page}&description=${description}`,
       method: 'GET',      
       json: true,
     };
